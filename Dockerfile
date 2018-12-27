@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-MAINTAINER Brian J. Cardiff <bcardiff@gmail.com>
+MAINTAINER Robin Ostlund <me@robinostlund.name>
 
 ENV RCLONE_VERSION=current
 ENV ARCH=amd64

@@ -1,5 +1,5 @@
 # docker-rclone
-# Creds to 
+# Creds to bcardiff for the work for this docker container (this is a forked version)
 
 Docker image to perform a [rclone](http://rclone.org) sync based on a cron schedule, with [healthchecks.io](https://healthchecks.io) monitoring.
 
