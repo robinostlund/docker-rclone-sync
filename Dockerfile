@@ -1,8 +1,8 @@
-FROM alpine:3.5
+FROM alpine:3.11
 
 MAINTAINER Robin Ostlund <me@robinostlund.name>
 
-ENV RCLONE_VERSION=current
+ENV INST_RCLONE_VERSION=current
 ENV ARCH=amd64
 ENV SYNC_SRC=
 ENV SYNC_DEST=
@@ -17,8 +17,8 @@ ENV TZ=
 RUN apk -U add ca-certificates fuse wget dcron tzdata \
     && rm -rf /var/cache/apk/* \
     && cd /tmp \
-    && wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip \
-    && unzip /tmp/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip \
+    && wget -q http://downloads.rclone.org/rclone-${INST_RCLONE_VERSION}-linux-${ARCH}.zip \
+    && unzip /tmp/rclone-${INST_RCLONE_VERSION}-linux-${ARCH}.zip \
     && mv /tmp/rclone-*-linux-${ARCH}/rclone /usr/bin \
     && rm -r /tmp/rclone*
 
